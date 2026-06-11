@@ -15,3 +15,6 @@ class complaintSerializer(serializers.ModelSerializer):
             'latitude',
 
         ]
+        extra_kwargs = {
+            'complaint_image': {'required': False, 'allow_null': True}
+        }
