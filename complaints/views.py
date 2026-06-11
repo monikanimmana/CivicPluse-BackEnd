@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from rest_framework.generics import CreateAPIView ,ListAPIView ,UpdateAPIView
+from rest_framework.generics import *
 from rest_framework.permissions import IsAuthenticated
 from .models import *
 from .serializers import *
@@ -26,7 +26,21 @@ class UpdateComplaint(UpdateAPIView):
 
     def get_queryset(self):
         return Complaint.objects.filter(created_by=self.request.user)
+    
+class ComplaintDetails(RetrieveAPIView):
+    permission_classes=[IsAuthenticated]
+    serializer_class=complaintSerializer
 
+    def get_queryset(self):
+        return Complaint.objects.filter(created_by=self.request.user)
     
 
+class DeleteComplaint(DestroyAPIView):
+    permission_classes=[IsAuthenticated]
+    serializer_class=complaintSerializer
+
+    def get_queryset(self):
+        return Complaint.objects.filter(created_by=self.request.user)
+    
+class AssignOfficer()
     
