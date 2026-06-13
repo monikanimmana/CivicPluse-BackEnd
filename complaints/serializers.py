@@ -25,3 +25,10 @@ class AssignOfficeSerializer(serializers.ModelSerializer):
         fields=[
             'assignOfficer',
         ]
+
+class UpdateComplaintStatus(serializers.ModelSerializer):
+    class Meta:
+        model=Complaint
+        fields=[
+            'complaint_status',
+        ]

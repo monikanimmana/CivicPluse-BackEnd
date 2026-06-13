@@ -62,7 +62,15 @@ class ListOfficerComplaints(ListAPIView):
     def get_queryset(self):
         return Complaint.objects.filter(assignedOfficer=self.request.user)
         
+class UpdateComplaintStatus(UpdateAPIView):
+    permission_classes=[IsAuthenticated]
+    serializer_class=AssignOfficeSerializer
 
+    def get_queryset(self):
+        return Complaint.objects.filter(assignedOfficer=self.request.user)
+        
+        
+        
 
 
 
