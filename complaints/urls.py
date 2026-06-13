@@ -9,5 +9,6 @@ urlpatterns =[
     path('delete/',DeleteComplaint.as_view(),name='delete_complaint'),
     path('assign-officer/<int:pk>',AssignOfficer.as_view(),name="assign_officer"),
     path('officer-complaints/',ListOfficerComplaints.as_view(),name="officer_complaints"),
-    path(),
+    path('updatecomplaint_status/',UpdateComplaintStatus.as_view(),name="complaint_status"),
+    
 ]

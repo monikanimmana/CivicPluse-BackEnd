@@ -3,6 +3,8 @@ from rest_framework.generics import *
 from rest_framework.permissions import *
 from .models import *
 from .serializers import *
+from django.utils.timezone import now
+from rest_framework.views import APIView
 
 
 # Create your views here.
@@ -69,8 +71,23 @@ class UpdateComplaintStatus(UpdateAPIView):
     def get_queryset(self):
         return Complaint.objects.filter(assignedOfficer=self.request.user)
         
-        
-        
+    def perform_update(self,serializer):
+        complaints=serializer.save()
+
+        if complaints.complaint_status == "resolved":
+            complaints.resolved_at=now()
+
+        serializer.save()
+         
+class CitizenDashboard(APIView):
+    permission_classes=[IsAuthenticated]
+
+    def get(self,request):
+        complaints=Complaint.objects.filter(created_by=self.request.user)
+
+        data = {
+            
+        }
 
 
 
