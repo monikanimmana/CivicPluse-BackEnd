@@ -1,8 +1,9 @@
 from django.shortcuts import render
 from rest_framework.generics import *
-from rest_framework.permissions import IsAuthenticated
+from rest_framework.permissions import *
 from .models import *
 from .serializers import *
+
 
 # Create your views here.
 class CreateComplaint(CreateAPIView):
@@ -42,5 +43,27 @@ class DeleteComplaint(DestroyAPIView):
     def get_queryset(self):
         return Complaint.objects.filter(created_by=self.request.user)
     
-class AssignOfficer()
+class AssignOfficer(UpdateAPIView):
+    permission_classes=[IsAuthenticated]
+    serializer_class=AssignOfficeSerializer
+    queryset=Complaint.objects.all()
+
+    def perform_update(self, serializer):
+        office=serializer.validated_data['assignedOfficer']
+        if office.role!="officer" :
+            raise ValidationError("selected user is not a officer")
+        
+        serializer.save(status="assigned")
+
+class ListOfficerComplaints(ListAPIView):
+    permission_classes=[IsAuthenticated]
+    serializer_class=complaintSerializer
+    
+    def get_queryset(self):
+        return Complaint.objects.filter(assignedOfficer=self.request.user)
+        
+
+
+
+
     

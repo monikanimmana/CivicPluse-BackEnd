@@ -18,3 +18,10 @@ class complaintSerializer(serializers.ModelSerializer):
         extra_kwargs = {
             'complaint_image': {'required': False, 'allow_null': True}
         }
+
+class AssignOfficeSerializer(serializers.ModelSerializer):
+    class Meta:
+        model=Complaint
+        fields=[
+            'assignOfficer',
+        ]
