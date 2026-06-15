@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
-
+from departments.models import *
 # Create your models here.
 class User(AbstractUser):
     ROLES_CHOICE=(
@@ -10,6 +10,7 @@ class User(AbstractUser):
         ('admin','Admin'),
     )
 
+    department=models.ForeignKey(Department,null=True,blank=True,on_delete=models.SET_NULL)
     role = models.CharField(max_length=10,choices=ROLES_CHOICE,default='citizen')
     phone_no=models.CharField(max_length=15,null=True,blank=True,unique=True)
     preferred_language=models.CharField(max_length=12,default='English')
