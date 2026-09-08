@@ -47,7 +47,9 @@ CivicLens is a full-stack platform for managing civic issue reporting and resolu
 
 <img width="796" height="452" alt="image" src="https://github.com/user-attachments/assets/2aa8c63f-0f98-4f3c-8aee-bc55f9c39698" />
 
-<img width="959" height="509" alt="image" src="https://github.com/user-attachments/assets/69161898-7e6f-4dfd-9885-8f26a424f060" />
+
+<img width="757" height="510" alt="image" src="https://github.com/user-attachments/assets/793d5c28-5894-4178-a70c-09bc1895258b" />
+
 
 <img width="773" height="386" alt="image" src="https://github.com/user-attachments/assets/b280a846-967d-47aa-a4e3-448d46c2026b" />
 
