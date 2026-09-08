@@ -42,6 +42,20 @@ CivicLens is a full-stack platform for managing civic issue reporting and resolu
 | Frontend | React + TypeScript |
 
 ---
+<img width="959" height="463" alt="image" src="https://github.com/user-attachments/assets/a3af2f6f-64de-4baa-ae8e-d063c0685163" />
+<img width="959" height="461" alt="image" src="https://github.com/user-attachments/assets/8cd7aa19-0e94-4243-ae1d-bc978e6bb47b" />
+
+<img width="796" height="452" alt="image" src="https://github.com/user-attachments/assets/2aa8c63f-0f98-4f3c-8aee-bc55f9c39698" />
+
+<img width="959" height="509" alt="image" src="https://github.com/user-attachments/assets/69161898-7e6f-4dfd-9885-8f26a424f060" />
+
+<img width="773" height="386" alt="image" src="https://github.com/user-attachments/assets/b280a846-967d-47aa-a4e3-448d46c2026b" />
+
+<img width="752" height="506" alt="image" src="https://github.com/user-attachments/assets/b771c7c0-b450-408f-bd37-5c79fa0d5675" />
+
+
+
+
 
 ## User Roles
 
